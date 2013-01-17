@@ -109,21 +109,19 @@ em {
   font-size: 1.15em;
 }
 
-strong {
+.initial {
   font-size: 2em;
-}
-
-/* Adjust line height of initials within body copy */
-strong.initial {
+  /* Adjust line height of initials within body copy */
   line-height: 0.5em;
 }
 
 .pull-quote,
 .call-out {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 8em;
-  padding-left: 2em;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 4em;
+  padding-left: 1em;
   border-left: 2px solid yellow;
 }
 
