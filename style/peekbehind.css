@@ -63,3 +63,31 @@ a:hover:visited {
   color: black;
   background-color: orange;
 }
+
+/* Vertical Rhythm with font sizes and margins */
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h3,
+dt,
+th,
+strong {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+/* Adjust x-height of em within body copy */
+em {
+  font-size: 1.15em;
+}
+
