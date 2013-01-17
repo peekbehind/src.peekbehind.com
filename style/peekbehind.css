@@ -91,3 +91,8 @@ em {
   font-size: 1.15em;
 }
 
+/* Adjust line height of initials within body copy */
+strong.initial {
+  line-height: 0.5em;
+}
+
