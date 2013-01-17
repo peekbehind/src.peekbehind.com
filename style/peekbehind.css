@@ -75,11 +75,8 @@ body {
 
 /* Reset margins */
 h1,h2,h3,h4,h5,h6,
-dt,
-table,
-tr,
-th,
-td,
+dt,dd,
+table,tr,th,td,
 p {
   margin: 0;
 }
@@ -111,6 +108,7 @@ h1 {
 /* Adjust x-height of em within body copy */
 em {
   font-size: 1.15em;
+  line-height: 0.86957em;
 }
 
 .initial {
