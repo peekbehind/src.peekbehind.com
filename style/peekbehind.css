@@ -50,14 +50,15 @@ em,
 */
 a:link { /* unvisited */
   color: yellow;
+  text-decoration: none;
 }
 a:visited {
   color: orange;
+  text-decoration: none;
 }
 a:hover {
   color: black;
   background-color: yellow;
-  text-decoration: none;
 }
 a:hover:visited {
   color: black;
