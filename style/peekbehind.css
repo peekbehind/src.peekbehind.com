@@ -73,12 +73,13 @@ body {
   margin: 4em 2em;
 }
 
-/* Reset margins */
+/* Reset margins and padding */
 h1,h2,h3,h4,h5,h6,
 dt,dd,
 table,tr,th,td,
 p {
   margin: 0;
+  padding: 0;
 }
 
 p {
@@ -142,6 +143,7 @@ table {
   width: 100%;
   border: 2px solid yellow;
   border-radius: 2em;
+  padding: 1em;
   margin-bottom: 3em;
 }
 
@@ -150,19 +152,21 @@ table {
   width: 25%;
 }
 
-th,
 td {
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
+  padding: 0 1em;
 }
 
-/* Justify text displayed in table columns */
 td p {
+  /* Justify text displayed in table columns */
   text-align: justify;
 }
 
 /* Keep the text in each cell aligned to the top of the row */
-td {
+thead,
+tbody {
   vertical-align: top;
 }
 
+tfoot {
+  vertical-align: bottom;
+}
