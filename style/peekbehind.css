@@ -157,3 +157,24 @@ tbody {
 tfoot {
   vertical-align: bottom;
 }
+
+/* Styles for forms */
+input {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+button {
+  background-color: yellow;
+  color: black;
+}
+
+button:hover {
+  background-color: black;
+  color: yellow;
+}
+
+input,
+button {
+  border-radius: 8px;
+}
