@@ -75,7 +75,10 @@ body {
 /* Reset margins */
 h1,h2,h3,h4,h5,h6,
 dt,
+table,
+tr,
 th,
+td,
 p {
   margin: 0;
 }
@@ -132,6 +135,28 @@ p {
   max-width: 35em;
 }
 
+/*
+  Styles for tables
+*/
+
+table {
+  width: 100%;
+  border: 2px solid yellow;
+  border-radius: 2em;
+  margin-bottom: 3em;
+}
+
+/* Give the same width to each column */
+.oneOf4 {
+  width: 25%;
+}
+
+th,
+td {
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+}
+
 /* Justify text displayed in table columns */
 td p {
   text-align: justify;
@@ -141,10 +166,4 @@ td p {
 td {
   vertical-align: top;
 }
-
-/* Give the same width to each column */
-.oneOf4 {
-  width: 25%;
-}
-
 
