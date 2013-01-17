@@ -9,6 +9,11 @@
   Euphorigenic font by Ray Larabie
   http://typodermicfonts.com/
 */
+h1,h2,h2,h4,h5,h6,
+dt,
+th,
+strong,
+em,
 .euphorigenic {
   font-family: Euphorigenic;
   font-weight: normal;
