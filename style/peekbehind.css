@@ -19,3 +19,30 @@ em,
   font-weight: normal;
   font-style: normal;
 }
+
+/*
+  Palette or colors
+*/
+.on-black {
+  background-color: black;
+}
+.on-white {
+  background-color: white;
+}
+.on-yellow {
+  background-color: yellow;
+}
+.black {
+  color: black;
+}
+.white {
+  color: white;
+}
+.yellow {
+  color: yellow;
+}
+.orange {
+  color: orange;
+}
+
+
