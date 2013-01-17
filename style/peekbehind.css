@@ -133,11 +133,18 @@ p {
 }
 
 /* Justify text displayed in table columns */
-table p {
+td p {
   text-align: justify;
+}
+
+/* Keep the text in each cell aligned to the top of the row */
+td {
+  vertical-align: top;
 }
 
 /* Give the same width to each column */
 .oneOf4 {
   width: 25%;
 }
+
+
