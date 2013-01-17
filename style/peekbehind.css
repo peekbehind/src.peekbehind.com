@@ -69,21 +69,39 @@ a:hover:visited {
 body {
   font-size: 16px;
   line-height: 1.5;
+  margin: 4em 2em;
+}
+
+/* Reset margins */
+h1,h2,h3,h4,h5,h6,
+dt,
+th,
+p {
+  margin: 0;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h3,
 dt,
-th,
-strong {
+th {
   font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 3em;
+  margin-top: 0.66666em;
+  margin-bottom: 0.33333em;
 }
 
 h1 {
   font-size: 5em;
+  margin-bottom: 0.6em;
 }
 
 /* Adjust x-height of em within body copy */
@@ -91,8 +109,20 @@ em {
   font-size: 1.15em;
 }
 
+strong {
+  font-size: 2em;
+}
+
 /* Adjust line height of initials within body copy */
 strong.initial {
   line-height: 0.5em;
 }
 
+.pull-quote,
+.call-out {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 8em;
+  padding-left: 2em;
+  border-left: 2px solid yellow;
+}
