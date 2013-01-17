@@ -136,3 +136,8 @@ p {
 table p {
   text-align: justify;
 }
+
+/* Give the same width to each column */
+.oneOf4 {
+  width: 25%;
+}
