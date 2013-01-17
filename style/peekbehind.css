@@ -126,3 +126,11 @@ strong.initial {
   padding-left: 2em;
   border-left: 2px solid yellow;
 }
+
+/* Avoid eye strain by restricting maximum width of paragraphs
+   to about 60-80 characters per line
+*/
+p {
+  max-width: 35em;
+}
+
