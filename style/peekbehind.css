@@ -45,4 +45,21 @@ em,
   color: orange;
 }
 
-
+/*
+  Link colors
+*/
+a:link { /* unvisited */
+  color: yellow;
+}
+a:visited {
+  color: orange;
+}
+a:hover {
+  color: black;
+  background-color: yellow;
+  text-decoration: none;
+}
+a:hover:visited {
+  color: black;
+  background-color: orange;
+}
