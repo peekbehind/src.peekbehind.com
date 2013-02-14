@@ -89,7 +89,7 @@ h1 {
   margin-bottom: 0.6em;
 }
 
-/* replace title text with logo using styles */
+/* Replace title text with logo using styles */
 h1 a {
   background: url("logo.png") white no-repeat;
   display: block;
