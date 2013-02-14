@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="macros">
+  <!--
+    Useful macros to generate optimized websites
+
+    Author: Eric Bréchemier
+    License: http://creativecommons.org/licenses/by/3.0/
+    Version: 2012-12-22
+  -->
+
+  <!--
+    parent folder of macros.xml,
+    for resolution of relative paths when macros.xml is imported
+  -->
+  <dirname property="macros.basedir" file="${ant.file.macros}" />
+
+  <macrodef name="saxon">
+    <attribute name="xml" />
+    <attribute name="xsl" />
+    <attribute name="out" />
+    <element name="args" optional="yes"/>
+    <sequential>
+      <java classpath="${macros.basedir}/lib/saxon9he.jar"
+        classname="net.sf.saxon.Transform"
+        fork="true" maxmemory="512m"
+      >
+        <!-- Notes:
+        1 - use of fork="true" is required to avoid error
+            "SAXParserFactoryImpl not found"
+        2 - replaced <arg value="..." with <arg line="...",
+            the former resulting in empty content
+        -->
+        <arg line="-s:@{xml}"/>
+        <arg line="-xsl:@{xsl}"/>
+        <arg line="-o:@{out}"/>
+        <!-- additional args for params and specific configs -->
+        <args />
+      </java>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="yuicompressor">
+    <attribute name="in" />
+    <attribute name="out" />
+    <sequential>
+      <echo>yuicompressor: compress @{in} => @{out}</echo>
+      <java jar="${macros.basedir}/lib/yuicompressor-2.4.2.jar"
+          fork="true"
+          failonerror="true"
+      >
+        <arg value="-v" />
+        <arg line="--charset UTF-8" />
+        <arg line="-o @{out}" />
+        <arg line="@{in}" />
+      </java>
+    </sequential>
+  </macrodef>
+
+</project>
