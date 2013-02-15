@@ -14,11 +14,25 @@
     depends="html, images, fonts, css, seo"
   />
 
-  <target name="html" description="Optimize HTML by removing indent">
-    <saxon xml="index.html"
+  <macrodef name="unindent">
+    <attribute name="html" />
+    <sequential>
+      <saxon xml="@{html}"
            xsl="build/xsl/html5noindent.xsl"
-           out="${output.dir}/index.html"
-    />
+           out="${output.dir}/@{html}"
+      />
+    </sequential>
+  </macrodef>
+
+  <target name="html" description="Optimize HTML by removing indent">
+    <unindent html="index.html" />
+    <unindent html="for/wordpress/index.html" />
+    <unindent html="for/websites/index.html" />
+    <unindent html="for/you/index.html" />
+    <unindent html="subscribe/wordpress/index.html" />
+    <unindent html="subscribe/websites/index.html" />
+    <unindent html="subscribe/cancel/index.html" />
+    <unindent html="unsubscribe/index.html" />
   </target>
 
   <target name="css" description="Optimize CSS and copy images and fonts">
