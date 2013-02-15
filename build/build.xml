@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="peekbehind" basedir=".." default="export">
+  <!-- override defaults locally -->
+  <property file="build/user.properties" />
+
+  <!-- list of parameters used, with default values -->
+
+  <!-- relative path to output folder for the optimized web site -->
+  <property name="output.dir" value="../peekbehind.com" />
+
+  <import file="macros.xml" />
+
+  <target name="export" description="Export web site to target folder"
+    depends="html, images, fonts, css, seo"
+  />
+
+  <target name="html" description="Optimize HTML by removing indent">
+    <saxon xml="index.html"
+           xsl="build/xsl/html5noindent.xsl"
+           out="${output.dir}/index.html"
+    />
+  </target>
+
+  <target name="css" description="Optimize CSS and copy images and fonts">
+    <yuicompressor
+      in="style/peekbehind.css"
+      out="${output.dir}/style/peekbehind.css"
+    />
+  </target>
+
+  <target name="images" description="Copy images to website folder">
+    <copy todir="${output.dir}">
+      <fileset dir="." includes="favicon.ico" />
+    </copy>
+    <copy todir="${output.dir}/style">
+      <fileset dir="style" includes="*.png *.jpg" />
+    </copy>
+  </target>
+
+  <target name="fonts" description="Copy fonts to website folder">
+    <copy todir="${output.dir}/style/fonts">
+      <dirset dir="style/fonts" />
+    </copy>
+  </target>
+
+  <target name="seo" description="Copy files for search engine optimization">
+    <copy todir="${output.dir}">
+      <fileset dir="." includes="robots.txt" />
+    </copy>
+  </target>
+
+</project>
