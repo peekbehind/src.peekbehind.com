@@ -30,4 +30,9 @@
   -->
   <xsl:strip-space elements="*" />
 
+  <!-- replace sequences of several spaces with a single space -->
+  <xsl:template match="text()">
+    <xsl:value-of select="replace(., '\s+', ' ')" />
+  </xsl:template>
+
 </xsl:transform>
