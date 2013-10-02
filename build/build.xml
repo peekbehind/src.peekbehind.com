@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="peekbehind" basedir=".." default="export">
+  <!--
+    Build script to generate optimized website for PeekBehind.com
+
+    Author: Eric Bréchemier
+    License: http://creativecommons.org/licenses/by/3.0/
+    Version: 2013-02-15
+  -->
+
   <!-- override defaults locally -->
   <property file="build/user.properties" />
 
