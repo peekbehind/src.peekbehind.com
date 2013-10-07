@@ -5,7 +5,7 @@
 
     Author: Eric Bréchemier
     License: http://creativecommons.org/licenses/by/3.0/
-    Version: 2013-02-15
+    Version: 2013-10-07
   -->
 
   <!-- override defaults locally -->
@@ -19,7 +19,11 @@
   <import file="macros.xml" />
 
   <target name="export" description="Export web site to target folder"
-    depends="html, images, fonts, css, seo"
+    depends="html, style, seo"
+  />
+
+  <target name="style" description="Optimize CSS and copy images and fonts"
+    depends="css, images, fonts"
   />
 
   <macrodef name="unindent">
@@ -43,7 +47,7 @@
     <unindent html="unsubscribe/index.html" />
   </target>
 
-  <target name="css" description="Optimize CSS and copy images and fonts">
+  <target name="css" description="Optimize CSS">
     <yuicompressor
       in="style/peekbehind.css"
       out="${output.dir}/style/peekbehind.css"
