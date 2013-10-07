@@ -7,7 +7,7 @@
 
     Reference:
 
-    Polyglot Markup: HTML-Compatible XHTML Documents 
+    Polyglot Markup: HTML-Compatible XHTML Documents
     http://www.w3.org/TR/html-polyglot/
 
     In: XHTML page
