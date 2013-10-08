@@ -21,28 +21,11 @@ em,
 }
 
 /*
-  Palette or colors
+  Colors
 */
-.on-black {
+body {
   background-color: black;
-}
-.on-white {
-  background-color: white;
-}
-.on-yellow {
-  background-color: yellow;
-}
-.black {
-  color: black;
-}
-.white {
   color: white;
-}
-.yellow {
-  color: yellow;
-}
-.orange {
-  color: orange;
 }
 
 /*
