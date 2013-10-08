@@ -5,7 +5,7 @@
 
     Author: Eric Bréchemier
     License: http://creativecommons.org/licenses/by/3.0/
-    Version: 2013-10-07
+    Version: 2013-10-08
   -->
 
   <!-- override defaults locally -->
@@ -65,7 +65,7 @@
 
   <target name="fonts" description="Copy fonts to website folder">
     <copy todir="${output.dir}/style/fonts">
-      <dirset dir="style/fonts" />
+      <fileset dir="style/fonts" />
     </copy>
   </target>
 
