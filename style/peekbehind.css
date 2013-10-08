@@ -1,0 +1,16 @@
+/*
+  Styles for PeekBehind.com
+  by Eric Bréchemier
+*/
+
+@import url("fonts/euphorigenic/stylesheet.css");
+
+/*
+  Euphorigenic font by Ray Larabie
+  http://typodermicfonts.com/
+*/
+.euphorigenic {
+  font-family: Euphorigenic;
+  font-weight: normal;
+  font-style: normal;
+}
